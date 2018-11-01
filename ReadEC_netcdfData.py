@@ -46,7 +46,7 @@ def ReadECMeteDataUV(mtime,level):
 def ReadECDivergenceData(mtime,level):
     ufile = ecDirfile + "\\Divergence\\" + "Divergence_" + mtime.strftime('%Y') + ".nc"
     fh = Dataset(ufile, mode='r')
-    print(fh)
+    #print(fh)
     lons = (fh.variables["longitude"][:])
     levels = np.asarray(fh.variables['level'][:])
     times = np.asarray(fh.variables["time"][:])
@@ -57,6 +57,37 @@ def ReadECDivergenceData(mtime,level):
     mH = np.where(times == td)[0]
     diver = np.asarray(fh.variables["d"][mH, mL, :, :], np.float).squeeze()
     return lons, lats, diver
+#读取指定时间，批定高度层的温度
+def ReadECTempData(mtime,level):
+    ufile = ecDirfile + "\\T\\" + "T" + mtime.strftime('%Y') + ".nc"
+    fh = Dataset(ufile, mode='r')
+    #print(fh)
+    lons = (fh.variables["longitude"][:])
+    levels = np.asarray(fh.variables['level'][:])
+    times = np.asarray(fh.variables["time"][:])
+    lats = (fh.variables["latitude"][:])
+    mL = np.where(levels == level)[0]  # 找到当前高度层索引
+    # 计算距标准时间的小时数
+    td = (mtime - datetime.datetime(1900, 1, 1, 0, 0, 0)).total_seconds() / 3600
+    mH = np.where(times == td)[0]
+    temp = np.asarray(fh.variables["t"][mH, mL, :, :], np.float).squeeze()
+    return lons, lats, temp
+#读取批定时间批定高度层的相对湿度
+def ReadECRHData(mtime,level):
+    ufile = ecDirfile + "\\RH\\" + "RH" + mtime.strftime('%Y') + ".nc"
+    fh = Dataset(ufile, mode='r')
+    #print(fh)
+    lons = (fh.variables["longitude"][:])
+    levels = np.asarray(fh.variables['level'][:])
+    times = np.asarray(fh.variables["time"][:])
+    lats = (fh.variables["latitude"][:])
+    mL = np.where(levels == level)[0]  # 找到当前高度层索引
+    # 计算距标准时间的小时数
+    td = (mtime - datetime.datetime(1900, 1, 1, 0, 0, 0)).total_seconds() / 3600
+    mH = np.where(times == td)[0]
+    rh = np.asarray(fh.variables["r"][mH, mL, :, :], np.float).squeeze()
+    return lons, lats, rh
+
 #print(fh.variables["longitude"][:])
 #print(fh.variables["latitude"][:])
 # time=(fh.variables["time"][:])  #units: hours since 1900-01-01 00:00:00.0
