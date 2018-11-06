@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b5f1489-33ee-4ac5-97bf-ab353e60f038" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DownLoadECData.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8b5f1489-33ee-4ac5-97bf-ab353e60f038" name="Default Changelist" comment="气象指标要素计算，假相当位温计算函数">
+      <change afterPath="$PROJECT_DIR$/OutputTfParameters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReadFYHDFData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DrawDataOnMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/DrawDataOnMap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QxParametersFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/QxParametersFunction.py" afterDir="false" />
@@ -60,32 +59,35 @@
     <session id="338351741">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="637" />
-          <entry key="txt" value="14" />
+          <entry key="py" value="3410" />
+          <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="637" />
+          <entry key="PLAIN_TEXT" value="36" />
+          <entry key="Python" value="3410" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
+          <entry key="png" value="4" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="3" />
+          <entry key="Image" value="4" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
     </session>
@@ -93,56 +95,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DrawDataOnMap.py">
+        <entry file="file://$PROJECT_DIR$/OutputTfParameters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-                <marker date="1541059073943" expanded="true" signature="4167:4169" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReadNCSeaTemp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+            <state relative-caret-position="66">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/QxParametersFunction.py">
+        <entry file="file://$PROJECT_DIR$/ReadFYHDFData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="220">
+              <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
               <folding>
-                <marker date="1541059259673" expanded="true" signature="87:88" ph="..." />
-                <marker date="1541059259673" expanded="true" signature="87:92" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/1013586911/math.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReadEC_netcdfData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-              <folding>
-                <marker date="1541057241925" expanded="true" signature="2133:3354" ph="..." />
+                <element signature="e#20#38#0" expanded="true" />
+                <marker date="1541496314793" expanded="true" signature="177:242" ph="..." />
+                <marker date="1541496314793" expanded="true" signature="237:238" ph="..." />
+                <marker date="1541496314793" expanded="true" signature="389:1021" ph="..." />
               </folding>
             </state>
           </provider>
@@ -176,8 +146,10 @@
         <option value="$PROJECT_DIR$/temp" />
         <option value="$PROJECT_DIR$/DownECDataPy.py" />
         <option value="$PROJECT_DIR$/ReadEC_netcdfData.py" />
-        <option value="$PROJECT_DIR$/DrawDataOnMap.py" />
         <option value="$PROJECT_DIR$/QxParametersFunction.py" />
+        <option value="$PROJECT_DIR$/DrawDataOnMap.py" />
+        <option value="$PROJECT_DIR$/OutputTfParameters.py" />
+        <option value="$PROJECT_DIR$/ReadFYHDFData.py" />
       </list>
     </option>
   </component>
@@ -195,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,11 +179,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -224,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DrawDataOnMap">
+  <component name="RunManager" selected="Python.ReadFYHDFData">
     <configuration name="DownECDataPy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TfAnalyseProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -309,14 +281,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ReadFYHDFData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="TfAnalyseProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReadFYHDFData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.DownECDataPy" />
       <item itemvalue="Python.DrawDataOnMap" />
       <item itemvalue="Python.ReadEC_netcdfData" />
       <item itemvalue="Python.QxParametersFunction" />
+      <item itemvalue="Python.ReadFYHDFData" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ReadFYHDFData" />
         <item itemvalue="Python.DrawDataOnMap" />
         <item itemvalue="Python.QxParametersFunction" />
         <item itemvalue="Python.ReadEC_netcdfData" />
@@ -342,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540979055075</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="气象指标要素计算，假相当位温计算函数">
+      <created>1541059379267</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541059379267</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -358,13 +360,13 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2318362" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18097754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993395" visible="true" weight="0.32294616" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993395" visible="true" weight="0.39235127" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
@@ -382,7 +384,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="计算假相当位温函数" />
-    <option name="LAST_COMMIT_MESSAGE" value="计算假相当位温函数" />
+    <MESSAGE value="气象指标要素计算，假相当位温计算函数" />
+    <option name="LAST_COMMIT_MESSAGE" value="气象指标要素计算，假相当位温计算函数" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/Anaconda3/Lib/site-packages/ecmwf_api_client-1.5.0-py3.6.egg/ecmwfapi/api.py">
@@ -418,48 +421,92 @@
     <entry file="file://$PROJECT_DIR$/ReadECDatFile.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/1013586911/math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReadNCSeaTemp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="660">
           <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReadEC_netcdfData.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/1013586911/math.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <marker date="1541057241925" expanded="true" signature="2133:3354" ph="..." />
-          </folding>
+        <state relative-caret-position="609">
+          <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DrawDataOnMap.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/1013586911/h5py/_conv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1541059073943" expanded="true" signature="4167:4169" ph="..." />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3/Lib/site-packages/h5py/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QxParametersFunction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="382">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fy1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fytf.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DrawDataOnMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="124" column="11" selection-start-line="124" selection-start-column="11" selection-end-line="124" selection-end-column="11" />
           <folding>
-            <marker date="1541059259673" expanded="true" signature="87:88" ph="..." />
-            <marker date="1541059259673" expanded="true" signature="87:92" ph="..." />
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1541380880377" expanded="true" signature="4190:4192" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OutputTfParameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadEC_netcdfData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1092">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="33" />
+          <folding>
+            <element signature="e#286#313#0" expanded="true" />
+            <marker date="1541121844059" expanded="true" signature="2133:3422" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadFYHDFData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <folding>
+            <element signature="e#20#38#0" expanded="true" />
+            <marker date="1541496314793" expanded="true" signature="177:242" ph="..." />
+            <marker date="1541496314793" expanded="true" signature="237:238" ph="..." />
+            <marker date="1541496314793" expanded="true" signature="389:1021" ph="..." />
           </folding>
         </state>
       </provider>

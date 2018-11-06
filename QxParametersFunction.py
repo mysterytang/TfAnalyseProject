@@ -6,14 +6,23 @@ def CaculateSita(prs,t,rh) :
     q=rh*(0.62197*es/(prs-es))/100.  #' 混合比
     e=prs*q/(0.62197+q)+1e-10  #'  水汽压
     eqt = 0
-    try:
-        tlcl=55.0+2840.0/(3.5*math.log(t,e)-math.log(e,e)-4.805) #'  对流抬升高度  Bolton(1980)公式
-        theta=t*math.pow((1000/prs),(0.2854*(1.0-0.28*q))) #'    位温
-        eqt=theta*math.exp(((3376./tlcl)-2.54)*q*(1.0+0.81*q)) #'   假相当位温
-    except:
-        pass
-    else :
-        print("当前计算出错了",t,rh)
-        print(tlcl)
-        print(math.log(t,e))
+    #print(prs,t,rh,es,q,e)
+    tlcl = 55.0 + 2840.0 / (3.5 * math.log(t, math.e) - math.log(e, math.e) - 4.805)  # '  对流抬升高度  Bolton(1980)公式
+    # print(tlcl)
+    theta = t * math.pow((1000 / prs), (0.2854 * (1.0 - 0.28 * q)))  # '    位温
+    # print(theta)
+    eqt = theta * math.exp(((3376. / tlcl) - 2.54) * q * (1.0 + 0.81 * q))  # '   假相当位温
+
+    # try:
+    #     tlcl = 55.0 + 2840.0 / (3.5 * math.log(t, math.e) - math.log(e, math.e) - 4.805)  # '  对流抬升高度  Bolton(1980)公式
+    #     #print(tlcl)
+    #     theta = t * math.pow((1000 / prs), (0.2854 * (1.0 - 0.28 * q)))  # '    位温
+    #     #print(theta)
+    #     eqt = theta * math.exp(((3376. / tlcl) - 2.54) * q * (1.0 + 0.81 * q))  # '   假相当位温
+    # except:
+    #     pass
+    # else :
+    #     print("当前计算出错了",prs,t,rh)
     return  eqt
+# t=CaculateSita(925,294.1150296828141,92.94545402519287)
+# print(t)

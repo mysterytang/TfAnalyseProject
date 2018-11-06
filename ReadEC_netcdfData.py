@@ -86,6 +86,9 @@ def ReadECRHData(mtime,level):
     td = (mtime - datetime.datetime(1900, 1, 1, 0, 0, 0)).total_seconds() / 3600
     mH = np.where(times == td)[0]
     rh = np.asarray(fh.variables["r"][mH, mL, :, :], np.float).squeeze()
+    rh[rh < 0] = 0
+    rh[rh>100]=100
+    #print(fh.variables["r"])
     return lons, lats, rh
 
 #print(fh.variables["longitude"][:])

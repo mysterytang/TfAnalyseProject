@@ -6,6 +6,8 @@ from math import e
 from mpl_toolkits.basemap import Basemap
 from ReadNCSeaTemp import  DrawECParamOnMap
 from QxParametersFunction import *
+
+#画出UV分量的风向分布图
 def DrawUVMap(lons,lats,uu,vv,title=""):
     m = Basemap(llcrnrlon=90, llcrnrlat=0, urcrnrlon=180, urcrnrlat=40, resolution='c', epsg=3415)
     lon, lat = np.meshgrid(lons, lats)
@@ -78,9 +80,10 @@ def CacuDivergenceAndMap(mTime):
     lons, lats, diver = ReadECDivergenceData(mTime, mLevel)
     DrawECParamOnMap(lons, lats, diver, mTime.strftime("%Y-%m-%d") + " 850hPa散度分布图")
 #读取并计算 垂直不稳定度，并绘制于地图上
+#此指标取消
 def CacuEquivalentTempAndMap(mTime):
     #以下为三个常数变量
-    Cp=1
+    Cp=1004
     Ck=1
     Cd=1
     #计算垂直不稳定度需要
@@ -97,17 +100,16 @@ def CacuEquivalentTempAndMap(mTime):
     for i in np.arange(dxy, size[0] - dxy, 1):  # 纬度
         for j in np.arange(dxy, size[1] - dxy, 1):  # 经度
             # 以下开始计算
-            sita1000=CaculateSita(1000,T1000[i,j],rh1000[i,j])
+            #sita1000=CaculateSita(1000,T1000[i,j],rh1000[i,j])
             #print(sita1000)
             sita925=CaculateSita(925,T925[i,j],rh925[i,j])
             #print(sita925)
             #vpot=(Cp*(T1000-T925)*T1000*Ck*(logn(e,sita1000)-logn(e,sita925)))/(T925*Cd)
             #print(vpot)
             stabilityValue[i, j] =sita925
-
     # 绘制环流强度分布图
-    #print(np.max(stabilityValue))
-    #print(np.mean(stabilityValue))
+    print(np.max(stabilityValue))
+    print(np.mean(stabilityValue))
     DrawECParamOnMap(lons, lats, stabilityValue, mTime.strftime("%Y-%m-%d") + "垂直不稳定度分布图")
 
 
