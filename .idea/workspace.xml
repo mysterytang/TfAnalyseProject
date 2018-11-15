@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b5f1489-33ee-4ac5-97bf-ab353e60f038" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DrawDataOnMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/DrawDataOnMap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FY_AWXFormatManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/FY_AWXFormatManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputTfParameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/OutputTfParameters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadEC_netcdfData.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReadEC_netcdfData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadFYHDFData.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReadFYHDFData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadNCSeaTemp.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReadNCSeaTemp.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,14 +64,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="171" />
-          <entry key="py" value="11595" />
-          <entry key="txt" value="150" />
+          <entry key="py" value="11596" />
+          <entry key="txt" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="150" />
-          <entry key="Python" value="11766" />
+          <entry key="PLAIN_TEXT" value="193" />
+          <entry key="Python" value="11767" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -96,19 +90,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ReadFYHDFData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1892">
-              <caret line="120" column="55" selection-start-line="118" selection-start-column="7" selection-end-line="120" selection-end-column="55" />
+            <state relative-caret-position="154">
+              <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
               <folding>
                 <element signature="e#20#38#0" expanded="true" />
-                <marker date="1542153763938" expanded="false" signature="481:542" ph="..." />
-                <marker date="1542153763938" expanded="false" signature="541:542" ph="..." />
-                <marker date="1542153763938" expanded="false" signature="1473:2298" ph="..." />
-                <marker date="1542153763938" expanded="true" signature="6457:6462" ph="..." />
-                <marker date="1542153763938" expanded="true" signature="10883:12456" ph="..." />
-                <marker date="1542153763938" expanded="true" signature="11484:11485" ph="..." />
+                <marker date="1542245853590" expanded="false" signature="480:541" ph="..." />
+                <marker date="1542245853590" expanded="false" signature="540:541" ph="..." />
+                <marker date="1542245853590" expanded="false" signature="1472:2297" ph="..." />
+                <marker date="1542245853590" expanded="true" signature="6456:6461" ph="..." />
+                <marker date="1542245853590" expanded="true" signature="10882:12455" ph="..." />
+                <marker date="1542245853590" expanded="true" signature="11483:11484" ph="..." />
               </folding>
             </state>
           </provider>
@@ -126,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OutputTfParameters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="444">
+              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -193,19 +187,19 @@
         <option value="$PROJECT_DIR$/DownECDataPy.py" />
         <option value="$PROJECT_DIR$/QxParametersFunction.py" />
         <option value="$PROJECT_DIR$/FY_AWXFormatManager.py" />
-        <option value="$PROJECT_DIR$/ReadFYHDFData.py" />
         <option value="$PROJECT_DIR$/ReadEC_netcdfData.py" />
         <option value="$PROJECT_DIR$/DrawDataOnMap.py" />
         <option value="$PROJECT_DIR$/ReadNCSeaTemp.py" />
         <option value="$PROJECT_DIR$/OutputTfParameters.py" />
+        <option value="$PROJECT_DIR$/ReadFYHDFData.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="452" />
+    <option name="x" value="451" />
     <option name="y" value="20" />
-    <option name="width" value="1919" />
-    <option name="height" value="1029" />
+    <option name="width" value="1920" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -406,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541559710695</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加了EC数据的输出，并将每日数据以HDF格式保存，输出月平均指标图像">
+      <created>1542245169511</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542245169511</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -419,9 +420,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21796565" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21796565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -431,7 +433,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4980185" weight="0.16548797" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.7025496" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.17847025" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993395" weight="0.6331445" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.501321" side_tool="true" weight="0.33144477" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4993395" weight="0.17705382" />
@@ -474,7 +476,8 @@
     <MESSAGE value="气象指标要素计算，假相当位温计算函数" />
     <MESSAGE value="完成了，对风云2云图HDF格式的解读，并提取指定区域内的亮温数据，对无数据格点进行插值处理。插值方法采用，邻近区域均值法" />
     <MESSAGE value="添加对HDf云图整理函数，将HDf云图，按年/月/文件的形式重新保存。" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加对HDf云图整理函数，将HDf云图，按年/月/文件的形式重新保存。" />
+    <MESSAGE value="添加了EC数据的输出，并将每日数据以HDF格式保存，输出月平均指标图像" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了EC数据的输出，并将每日数据以HDF格式保存，输出月平均指标图像" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/Anaconda3/Lib/site-packages/ecmwf_api_client-1.5.0-py3.6.egg/ecmwfapi/api.py">
@@ -559,6 +562,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+          <folding>
+            <element signature="e#1481#2083#0" />
+            <element signature="e#2138#2719#0" />
+            <element signature="e#2773#3420#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -587,22 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="2892" column="20" selection-start-line="2892" selection-start-column="20" selection-end-line="2892" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReadFYHDFData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1892">
-          <caret line="120" column="55" selection-start-line="118" selection-start-column="7" selection-end-line="120" selection-end-column="55" />
-          <folding>
-            <element signature="e#20#38#0" expanded="true" />
-            <marker date="1542153763938" expanded="false" signature="481:542" ph="..." />
-            <marker date="1542153763938" expanded="false" signature="541:542" ph="..." />
-            <marker date="1542153763938" expanded="false" signature="1473:2298" ph="..." />
-            <marker date="1542153763938" expanded="true" signature="6457:6462" ph="..." />
-            <marker date="1542153763938" expanded="true" signature="10883:12456" ph="..." />
-            <marker date="1542153763938" expanded="true" signature="11484:11485" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -642,8 +634,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OutputTfParameters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="444">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadFYHDFData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="e#20#38#0" expanded="true" />
+            <marker date="1542245853590" expanded="false" signature="480:541" ph="..." />
+            <marker date="1542245853590" expanded="false" signature="540:541" ph="..." />
+            <marker date="1542245853590" expanded="false" signature="1472:2297" ph="..." />
+            <marker date="1542245853590" expanded="true" signature="6456:6461" ph="..." />
+            <marker date="1542245853590" expanded="true" signature="10882:12455" ph="..." />
+            <marker date="1542245853590" expanded="true" signature="11483:11484" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

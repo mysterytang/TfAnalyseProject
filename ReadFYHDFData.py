@@ -16,7 +16,7 @@ minLon, maxLon = 95, 165
 minLat, maxLat = -5, 55
 # 生成全圆盘，等经纬度投影图像
 nx, ny = 2288, 2288  # 全圆盘的尺寸
-res = 0.05  # 设置投影后图像分辨率
+res = 0.1  # 设置投影后图像分辨率
 
 #此函数读取HDF格式原始云图2288X2288的定位网格
 class FyStarsManager(object):
