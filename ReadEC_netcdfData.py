@@ -12,7 +12,7 @@ import numpy as np
 import datetime
 import  os
 
-ecDirfile="C:\\EcData"#UV\\2016\\U_201611.nc"
+ecDirfile="d:\\EcData"#UV\\2016\\U_201611.nc"
 ##--------------------------------
 ##定义函数，根据气象要素标识，时间，读取指定范围的变量数据
 ##获取指定时间，指定高度层的，UV风的分量
@@ -30,15 +30,15 @@ def ReadECMeteDataUV(mtime,level):
     levels=np.asarray(fh.variables['level'][:])
     #print(levels)
     mL=np.where(levels==level)[0] #找到当前高度层索引
-    print(mL)
+    #print(mL)
     #计算距标准时间的小时数
     td=(mtime-datetime.datetime(1900,1,1,0,0,0)).total_seconds()/3600
-    #print(td)
+    # print(td)
+    # print(times)
     mH=np.where(times==td)[0]
-    print(mH)
-
+    #print(mH)
     vFh = Dataset(vfile, mode='r')
-    if mH>0 and mL>0:
+    if mH>=0 and mL>=0:
         uu = np.asarray(fh.variables["u"][mH,mL, :, :], np.float).squeeze()
         vv = np.asarray(vFh.variables["v"][mH, mL, :, :], np.float).squeeze()
     return lons,lats, uu,vv
