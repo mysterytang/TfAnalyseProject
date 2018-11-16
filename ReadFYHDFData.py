@@ -104,7 +104,7 @@ def SaveHDFToImageAndByte(file):
     # print(saveHdfFile)
     if not os.path.isfile(saveHdfFile):   #文件不存在则，重新读取插值
         print("读取"+saveHdfFile+"  .....")
-        tf_ir1, tf_ir2, tf_ir3, tf_ir4 = ReadorgHDF(file)
+        tf_ir1, tf_ir2, tf_ir3, tf_ir4,tf_vis = ReadorgHDF(file)
         # 读取定标对应的定标数据
         f = h5py.File(file, 'r')
         dset = f['/']
@@ -112,7 +112,7 @@ def SaveHDFToImageAndByte(file):
         cal2 = np.array(dset["CALChannelIR2"])
         cal3 = np.array(dset["CALChannelIR3"])
         cal4 = np.array(dset["CALChannelIR4"])
-        #calvis = np.array(dset["CALChannelVIS"])
+        calvis = np.array(dset["CALChannelVIS"])
         f.close()
 
         print("保存数据至"+saveHdfFile)
@@ -122,13 +122,13 @@ def SaveHDFToImageAndByte(file):
         hf.create_dataset('NOMChannelIR2', data=tf_ir2)
         hf.create_dataset('NOMChannelIR3', data=tf_ir3)
         hf.create_dataset('NOMChannelIR4', data=tf_ir4)
-        #hf.create_dataset('NOMChannelVIS', data=tf_vis)
+        hf.create_dataset('NOMChannelVIS', data=tf_vis)
         # 保存定标数据
         hf.create_dataset('CALChannelIR1', data=cal1)
         hf.create_dataset('CALChannelIR2', data=cal2)
         hf.create_dataset('CALChannelIR3', data=cal3)
         hf.create_dataset('CALChannelIR4', data=cal4)
-        #hf.create_dataset('CALChannelVIS', data=calvis)
+        hf.create_dataset('CALChannelVIS', data=calvis)
         hf.close()
     else: #直接从生成后的文件读取数据
         f = h5py.File(saveHdfFile, 'r')
@@ -139,16 +139,16 @@ def SaveHDFToImageAndByte(file):
         tf_ir2 = np.array(dset["NOMChannelIR2"])/4  # 红外1通道，灰度值
         tf_ir3 = np.array(dset["NOMChannelIR3"])/4  # 红外1通道，灰度值
         tf_ir4 = np.array(dset["NOMChannelIR4"])/4  # 红外1通道，灰度值
-        #tf_vis = np.array(dset["NOMChannelVIS"])/4  # 红外1通道，灰度值
+        tf_vis = np.array(dset["NOMChannelVIS"])*4  # 红外1通道，灰度值
 
 
     #将图像加入经纬网格数据
 
-    #SaveHdfToJPG(file, tf_ir1, tf_ir2, tf_ir3, tf_ir4)#, tf_vis)
+    SaveHdfToJPG(file, tf_ir1, tf_ir2, tf_ir3, tf_ir4, tf_vis)
     print("完成当前时次处理"+file)
 
 
-def SaveHdfToJPG(file, tf_ir1, tf_ir2, tf_ir3, tf_ir4):#, tf_vis):
+def SaveHdfToJPG(file, tf_ir1, tf_ir2, tf_ir3, tf_ir4, tf_vis):
     print("输出图像")
     # 将新区域图生成卫星云图，保存图像格式
     saveJPGDir = os.path.dirname(file).replace(ytHDFDir, ytUserJPGDir)
@@ -166,11 +166,9 @@ def SaveHdfToJPG(file, tf_ir1, tf_ir2, tf_ir3, tf_ir4):#, tf_vis):
     ir4jpg = os.path.join(saveJPGDir, "IR4_" + os.path.basename(file).replace(".hdf", ".jpg"))
     cv2.imwrite(ir4jpg, tf_ir4)
     DrawLonLatGrid(ir4jpg)
-    # visjpg = os.path.join(saveJPGDir, "VIS_" + os.path.basename(file).replace(".hdf", ".jpg"))
-    # cv2.imwrite(visjpg, tf_vis)
-    # DrawLonLatGrid(visjpg)
-
-
+    visjpg = os.path.join(saveJPGDir, "VIS_" + os.path.basename(file).replace(".hdf", ".jpg"))
+    cv2.imwrite(visjpg, tf_vis)
+    DrawLonLatGrid(visjpg)
 #在云图上绘制经纬网格
 def DrawLonLatGrid(ir1jpg):
     tf_ir1 = cv2.imread(ir1jpg, 0)
@@ -197,13 +195,13 @@ def ReadorgHDF(file):
     ir2 = np.array(dset["NOMChannelIR2"])  # 红外1通道，灰度值
     ir3 = np.array(dset["NOMChannelIR3"])  # 红外1通道，灰度值
     ir4 = np.array(dset["NOMChannelIR4"])  # 红外1通道，灰度值
-    #vis = np.array(dset["NOMChannelVIS"])  # 红外1通道，灰度值
+    vis = np.array(dset["NOMChannelVIS"])  # 红外1通道，灰度值
     # 以下对应的定标数据
     cal1 = np.array(dset["CALChannelIR1"])
     cal2 = np.array(dset["CALChannelIR2"])
     cal3 = np.array(dset["CALChannelIR3"])
     cal4 = np.array(dset["CALChannelIR4"])
-    #calvis = np.array(dset["CALChannelVIS"])
+    calvis = np.array(dset["CALChannelVIS"])
 
     fyCenterLon = float(dset["NomFileInfo"]['NOMCenterLon'])
 
@@ -222,9 +220,9 @@ def ReadorgHDF(file):
     tf_ir3 = InterToUserGridarray(datLat, datLon, ir3)
     print("处理IR4")
     tf_ir4 = InterToUserGridarray(datLat, datLon, ir4)
-    #print("处理VIS")
-    #tf_vis = InterToUserGridarray(datLat, datLon, vis)
-    return tf_ir1, tf_ir2, tf_ir3, tf_ir4#, tf_vis
+    print("处理VIS")
+    tf_vis = InterToUserGridarray(datLat, datLon, vis)
+    return tf_ir1, tf_ir2, tf_ir3, tf_ir4, tf_vis
 
 
 #对全圆盘网格进行等经纬度投影变幻，并插值
@@ -278,7 +276,8 @@ def InterToUserGridarray(datLat, datLon, dataNom):
     return  dataRet
 
 def TestOpencvFun():
-    img=cv2.imread('fyMapIR2.png',0)
+
+    img=cv2.imread('vis.png.png',0)
     ret,thresh=cv2.threshold(img,200,300,0)
     image,contours,hierarchy=cv2.findContours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
     color = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
@@ -321,13 +320,14 @@ def ReSaveUserHDFAndImage():
         #处理一天的云图数据
         mHdfDirs=ytHDFDir+"/{:0>2d}/{:0>2d}/{:0>2d}".format(nday.year,nday.month,nday.day)
         #根据时间生成文件名
+        print(mHdfDirs)
         ytFlags=['FY2F','FY2G']
         for hour in range(24):  #根据24小时生成
             name2f = GetExtHDFileName(mHdfDirs,hour, nday, ytFlags)
+            print(name2f)
             SaveHDFToImageAndByte(name2f) #开始处理此数据
             print(name2f)
         nday =nday+datetime.timedelta(days=1)
-        break
     print("完成所有云图处理")
 
 #找到此时次的，任意风云系列卫星云图
@@ -358,13 +358,20 @@ def GetExtHDFileName(mHdfDirs,hour, nday, ytFlags):
 # print(datLonf[1000,200:500]-datLong[1000,200:500])
 # print(datLatg[1000,200:500]-datLatg[1000,200:500])
 
-
+#此函数读取整理后的HDF云图，生成台风区域云图，并保存JPG
 ReSaveUserHDFAndImage()
+
+   #测试下可见光图
+# file = "E:\\2-Data\\Fy_HDF\\2016\\01\\09\\FY2F_FDI_ALL_NOM_20160109_0600.hdf"
+# f = h5py.File(file,'r')
+# dset=f['/']
+# vis = np.array(dset["NOMChannelVIS1KM"])*4 # 红外1通道，灰度值
+# cv2.imwrite("vis.png",vis)
 
 
 
 #TestOpencvFun()
-#ReadAndReSaveHDFFile()  已处理完成
+ReadAndReSaveHDFFile()  #已处理完成
 # print(dset["NOMChannelIR2"])
 # print(dset["NOMChannelIR3"])
 # print(dset["NOMChannelIR4"])
